@@ -1,0 +1,50 @@
+{
+  "name": "betternpm-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "NPM packages with improvements!",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "npm alternative",
+    "monorepo"
+  ],
+  "author": "ineedjobtostartwork",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "build:npm": "turbo build:npm",
+    "start": "turbo start",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "lint:test": "turbo lint:fix",
+    "format": "turbo format",
+    "clean": "turbo clean",
+    "npm:prepack": "turbo npm:prepack",
+    "npm:postpack": "turbo npm:postpack",
+    "npm:version": "changeset version",
+    "npm:publish": "changeset publish",
+    "preinstall": "husky init",
+    "pre": "turbo pre",
+    "pre:husky": "git add . && lint-staged",
+    "prepare": "husky",
+    "test": "echo \"Error: no test specified\""
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "commitsmile": "^0.6.1",
+    "globals": "^15.9.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "lint-staged": {
+    "*": ""
+  },
+  "packageManager": "pnpm@9.4.0"
+}
