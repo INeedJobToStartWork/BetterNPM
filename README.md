@@ -13,9 +13,12 @@ Currently:
 - Documentation is outdated
 - Types are outdated
 - Not friendly for developers to use it as Dependency
+- Not minified
 
 ## Mission
 
+- 100% original functionality (Maybe extras sometimes)
+- Refactor on Typescript
 - Make Dependencies easier in use for developers of external packages
 - Up-to-date documentation
 - Correct types
@@ -28,11 +31,11 @@ About packages:
 
 - 📖 TSDocs (Internal documentation)
 - ♻️ Minified
-- ⚠️ Error Handler (Custom - `oh-my-error`)
+- ⚠️ Error Handler (Custom - `oh-my-error`, why this?)
 - ✅ Support JS/TS & CJS/ESM
 - 📝 Debug Logging (Only for CLI commands)
 
-## Packages:
+## Packages
 
 ### Status
 
