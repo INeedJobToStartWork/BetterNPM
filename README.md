@@ -8,7 +8,7 @@ Hello! This project is created to show how NPM packages could work if they would
 
 Project it's made by **Community** and is not **related with official NPM**.
 
-## Currently Problems of NPM:
+## Currently Problems of NPM
 
 - Documentation is outdated
 - Types are outdated
