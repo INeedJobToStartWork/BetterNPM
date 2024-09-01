@@ -11,11 +11,11 @@
 		"names",
 		"validation"
 	],
-	"homepage": "https://github.com/INeedJobToStartWork/MyUtilia",
-	"bugs": "https://github.com/INeedJobToStartWork/MyUtilia/issues/new/choose",
+	"homepage": "https://github.com/INeedJobToStartWork/BetterNPM",
+	"bugs": "https://github.com/INeedJobToStartWork/BetterNPM/issues/new/choose",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/INeedJobToStartWork/MyUtilia",
+		"url": "git+https://github.com/INeedJobToStartWork/BetterNPM",
 		"directory": "packages/npm"
 	},
 	"license": "MIT",
