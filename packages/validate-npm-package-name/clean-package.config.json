@@ -13,8 +13,7 @@
 					"require": "./index.d.ts"
 				},
 				"import": "./index.mjs",
-				"require": "./index.js",
-				"*": "./*"
+				"require": "./index.js"
 			}
 		}
 	}

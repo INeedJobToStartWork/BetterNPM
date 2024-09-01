@@ -29,7 +29,8 @@ export default defineConfig({
 				{ from: "./package.json", to: "./package.json" },
 				{ from: "./.npmrc", to: "./.npmrc" },
 				{ from: "./.npmignore", to: "./.npmignore" },
-				{ from: "./README.md", to: "./README.md" }
+				{ from: "./README.md", to: "./README.md" },
+				{ from: "./LICENSE", to: "./LICENSE" }
 			]
 		})
 	]

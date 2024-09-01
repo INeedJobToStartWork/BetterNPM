@@ -1,2 +1,2 @@
-export * from './nameValidator';
-export * from './isScopedPackage';
+export * from "./nameValidator";
+export * from "./isScopedPackage";

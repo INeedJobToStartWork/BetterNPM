@@ -1,7 +1,6 @@
 {
 	"name": "@betternpm/validate-npm-package-name",
 	"version": "1.0.0",
-	"private": "true",
 	"description": "NPMs utility module",
 	"keywords": [
 		"utils",
