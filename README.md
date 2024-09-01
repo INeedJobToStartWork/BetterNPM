@@ -33,6 +33,7 @@ About packages:
 - ♻️ Minified
 - ⚠️ Error Handler (Custom - `oh-my-error`, why this?)
 - ✅ Support JS/TS & CJS/ESM
+- 🐒 Rewriten Test units from tap -> vitest
 - 📝 Debug Logging (Only for CLI commands)
 
 ## Packages

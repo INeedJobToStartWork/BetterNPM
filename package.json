@@ -30,10 +30,11 @@
     "pre": "turbo pre",
     "pre:husky": "git add . && lint-staged",
     "prepare": "husky",
-    "test": "echo \"Error: no test specified\""
+    "test": "turbo test"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
+    "@types/lint-staged": "~13.3.0",
     "commitsmile": "^0.6.1",
     "globals": "^15.9.0",
     "husky": "^9.1.5",

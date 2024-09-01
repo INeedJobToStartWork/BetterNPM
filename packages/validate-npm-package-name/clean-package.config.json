@@ -1,0 +1,21 @@
+{
+	"indent": 4,
+	"remove": ["devDependencies", "lint-staged", "bin"],
+	"replace": {
+		"type": "commonjs",
+		"scripts": {
+			"npm:postpack": "clean-package restore"
+		},
+		"exports": {
+			".": {
+				"types": {
+					"import": "./index.d.mts",
+					"require": "./index.d.ts"
+				},
+				"import": "./index.mjs",
+				"require": "./index.js",
+				"*": "./*"
+			}
+		}
+	}
+}
