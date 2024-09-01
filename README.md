@@ -18,14 +18,15 @@ Project it's made by **Community** and is not **related with official NPM**.
 ## Mission
 
 - 100% original functionality (Maybe extras sometimes)
-- Refactor on Typescript
+- Typescript as Base
 - Make Dependencies easier in use for developers of external packages
 - Up-to-date documentation
 - Correct types
+- Minimal usage of External Packages
 
 About:
 
-- 📘 Docs (External documentation)
+- 📘 Docs (External documentation) (in soon)
 
 About packages:
 
@@ -50,7 +51,7 @@ About packages:
 
 | Category                               | Functionality                                             | (Original) Package name                                                                      | (Better) Package name                                                                                      | Progress Status |
 | -------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | --------------- |
-| 📦 Package Management                  | 🔍 Validates NPM package names                            | [validate-npm-package-name](https://www.npmjs.com/package/validate-npm-package-name)         | [@betternpm/validate-npm-package-name](https://www.npmjs.com/package/@betternpm/validate-npm-package-name) | 💤              |
+| 📦 Package Management                  | 🔍 Validates NPM package names                            | [validate-npm-package-name](https://www.npmjs.com/package/validate-npm-package-name)         | [@betternpm/validate-npm-package-name](https://www.npmjs.com/package/@betternpm/validate-npm-package-name) | 🛠️              |
 | 📦 Package Management                  | 📥 NPM API (programmatic) Package download and extraction | [pacote](https://www.npmjs.com/package/pacote)                                               | [@betternpm/pacote](https://www.npmjs.com/package/@betternpm/pacote)                                       | 💤              |
 | 📦 Package Management                  | 🎁 Create NPM packages                                    | [libnpmpack](https://www.npmjs.com/package/libnpmpack)                                       | [@betternpm/libnpmpack](https://www.npmjs.com/package/@betternpm/libnpmpack)                               | 💤              |
 | 📦 Package Management                  | 🏷️ Parse package names and specifiers                     | [npm-package-arg](https://www.npmjs.com/package/npm-package-arg)                             | [@betternpm/npm-package-arg](https://www.npmjs.com/package/@betternpm/npm-package-arg)                     | 💤              |
