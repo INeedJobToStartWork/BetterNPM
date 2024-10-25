@@ -21,6 +21,7 @@
     "lint:fix": "turbo lint:fix",
     "lint:test": "turbo lint:fix",
     "format": "turbo format",
+    "bench": "turbo bench",
     "clean": "turbo clean",
     "npm:prepack": "turbo npm:prepack",
     "npm:postpack": "turbo npm:postpack",
@@ -33,12 +34,12 @@
     "test": "turbo test"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.7",
+    "@changesets/cli": "^2.27.8",
     "@types/lint-staged": "~13.3.0",
     "commitsmile": "^0.6.1",
     "globals": "^15.9.0",
-    "husky": "^9.1.5",
-    "lint-staged": "^15.2.9",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "turbo": "latest"
   },
   "engines": {

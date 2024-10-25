@@ -9,7 +9,7 @@ export const SCOPED_PACKAGE_PATTERN = /^(?:@([^/]+?)\/)?([^/]+?)$/u;
  *
  * NPM package name Scope Validator
  *
- * @example isScopedPackage("@scope/example")
+ * @example isScopedPackage("\@scope/example")
  * @param name - NPM package name
  * @returns Boolean
  */

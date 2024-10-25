@@ -1,7 +1,7 @@
 /* eslint-disable guard-for-in */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition , @EslintSonar/no-duplicate-string */
 import type { TMyError, TMyErrorList } from "oh-my-error";
-import { MyError } from "oh-my-error";
+import { myError } from "oh-my-error";
 import { builtinModules } from "node:module";
 import isScopedPackage from "./isScopedPackage";
 
@@ -90,19 +90,19 @@ export const MyErrorList = {
 	},
 	CORE_MODULE_NAME: {
 		code: "CORE_MODULE_NAME",
-		hint: { user: "Choose a different name that is not a core module name" },
+		hint: { user: "Choose a differenceerent name that is not a core module name" },
 		message: {
 			dev: "Name cannot be a core module name",
-			user: "This name is reserved. Please choose a different name."
+			user: "This name is reserved. Please choose a differenceerent name."
 		},
 		name: "Reserved Name Error"
 	},
 	BLACK_LISTED: {
 		code: "BLACKLISTED",
-		hint: { user: "Choose a different name that is not blacklisted" },
+		hint: { user: "Choose a differenceerent name that is not blacklisted" },
 		message: {
 			dev: "Name is blacklisted",
-			user: "This name is not allowed. Please choose a different name."
+			user: "This name is not allowed. Please choose a differenceerent name."
 		},
 		name: "Prohibited Name Error"
 	},
@@ -216,7 +216,7 @@ export function nameValidator(
 	for (const key in ValidationList) {
 		const currentValidation = ValidationList[key as keyof typeof ValidationList];
 		if (Object.hasOwn(ValidationList, key) && currentValidation?.condition()) {
-			if (errorThrow) throw new MyError(MyErrorList[key as keyof typeof MyErrorList] as Required<TMyError>);
+			if (errorThrow) throw myError(MyErrorList[key as keyof typeof MyErrorList] as Required<TMyError>);
 			if (currentValidation.type == "error") {
 				problems.errors.push(MyErrorList[key as keyof typeof MyErrorList] as Required<TMyError>);
 			}

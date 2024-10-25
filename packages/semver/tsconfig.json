@@ -12,7 +12,7 @@
 		"noEmit": true,
 		"stripInternal": true
 	},
-	"include": ["src", "eslint.config.js"],
-	"exclude": ["node_modules", "**/*.spec.ts", "dist"],
+	"include": ["src", "eslint.config.js", "vite.config.ts"],
+	"exclude": ["node_modules", "dist"],
 	"extends": "@ineedj/tsconfig/base.json"
 }

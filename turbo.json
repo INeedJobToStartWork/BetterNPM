@@ -3,6 +3,7 @@
   "tasks": {
     "pre": {},
     "start": {},
+    "bench": {},
     "build": {},
     "build:npm": {
       "inputs": ["*", "!dist"]

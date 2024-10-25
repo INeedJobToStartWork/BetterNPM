@@ -13,7 +13,7 @@ export default ineedj({
 	},
 	syntax: {
 		mdx: true,
-		vitest: false,
+		vitest: true,
 		eslint: true,
 		jsx: false,
 		next: false,
@@ -34,7 +34,8 @@ export default ineedj({
 	"@EslintSecurity/detect-object-injection",
 	"@typescript-eslint/no-throw-literal",
 	"@EslintImports/namespace",
-	"@EslintUnicorn/no-nested-ternary"
+	"@EslintPii/no-phone-number",
+	"@typescript-eslint/explicit-module-boundary-types"
 );
 
 // export default [];

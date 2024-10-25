@@ -1,0 +1,9 @@
+{
+  "mode": "pre",
+  "tag": "1.0.0",
+  "initialVersions": {
+    "@betternpm/semver": "1.0.0-prerelease",
+    "@betternpm/validate-npm-package-name": "1.0.0"
+  },
+  "changesets": []
+}
