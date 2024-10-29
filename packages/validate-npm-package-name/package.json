@@ -1,6 +1,6 @@
 {
 	"name": "@betternpm/validate-npm-package-name",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "NPMs utility module",
 	"keywords": [
 		"utils",
@@ -42,10 +42,11 @@
 		]
 	},
 	"dependencies": {
-		"oh-my-error": "1.1.1"
+		"oh-my-error": "^2.0.0-prerelease.0"
 	},
 	"devDependencies": {
-		"@ineedj/eslintrc": "~1.2.0",
+		"@esplugins/no-internal-exports": "^1.0.0",
+		"@ineedj/eslintrc": "~1.2.2",
 		"@ineedj/prettierrc": "^2.0.0",
 		"@ineedj/tsconfig": "^1.0.0",
 		"@types/eslint": "~8.56.12",

@@ -1,5 +1,11 @@
 # @myutilia/env
 
+## 1.0.1
+
+### Patch Changes
+
+- change error messages
+
 ## 1.0.0
 
 ### Major Changes

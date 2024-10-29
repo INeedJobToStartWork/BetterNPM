@@ -1,4 +1,3 @@
-/* eslint-disable @EslintSonar/no-duplicate-string */
 // import { SemVer } from "@/classes";
 // import type { TOptionsSemVer } from "./parseSemVer";
 // import { OptionsSemVerDefaults } from "./parseSemVer";

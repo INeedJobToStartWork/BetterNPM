@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/985f8c86-4dad-400f-a5fa-16f57d0546d8)
+![image](https://github.com/user-attachments/assets/a8138f88-869d-4fae-9b2a-0021e6957aaa)
 
 <h1 align="center">Semver versioning handler</h1>
 <p align="center">semver</p>
@@ -35,7 +35,8 @@
   - [Types](#types-1)
     - [TReleases](#treleases)
   - [Variables](#variables-1)
-    - [RELEASE\_TYPES](#release_types)
+    - [PATTERNS](#patterns)
+    - [RELEASE_TYPES](#release_types)
 
 ## Install
 
@@ -403,6 +404,19 @@ type with every possible release (from variable [RELEASE_TYPES](###RELEASE_TYPES
 [Scroll to List of Contest](#-list-of-contest)
 
 ## Variables
+
+### PATTERNS
+
+| Name                  | Description                          |
+| --------------------- | ------------------------------------ |
+| PATTERN_STRICT_SEMVER | RegEx Pattern used for strict semver |
+| PATTERN_LOOSE_SEMVER  | RegEx Pattern used for loose semver  |
+| PATTERN_RANGE_MODE    | RegEx Pattern used for range semver  |
+
+**Links:** <br>
+[[📄File]](https://github.com/INeedJobToStartWork/BetterNPM/tree/main/packages/semver/src/functions/parseSemVer.ts)
+
+[Scroll to List of Contest](#-list-of-contest)
 
 ### RELEASE_TYPES
 

@@ -1,5 +1,3 @@
-/* eslint-disable curly */
-/* eslint-disable complexity */
 import type { TOptionsSemVer } from "./parseSemVer";
 import { OptionsSemVerDefaults, parseSemVer } from "./parseSemVer";
 import { isX } from "@/utils";
@@ -57,12 +55,15 @@ export const compareMinorMajorPatch = (
 	const checkX = (val1: number | string, val2: number | string): boolean =>
 		Boolean((mergedOptions.rangeMode && isX(val1)) || isX(val2));
 
-	if (!checkX(version1.major, version2.major) && version1.major !== version2.major)
+	if (!checkX(version1.major, version2.major) && version1.major !== version2.major) {
 		return version1.major > version2.major ? 1 : -1;
-	if (!checkX(version1.minor, version2.minor) && version1.minor !== version2.minor)
+	}
+	if (!checkX(version1.minor, version2.minor) && version1.minor !== version2.minor) {
 		return version1.minor > version2.minor ? 1 : -1;
-	if (!checkX(version1.patch, version2.patch) && version1.patch !== version2.patch)
+	}
+	if (!checkX(version1.patch, version2.patch) && version1.patch !== version2.patch) {
 		return version1.patch > version2.patch ? 1 : -1;
+	}
 
 	return 0;
 };

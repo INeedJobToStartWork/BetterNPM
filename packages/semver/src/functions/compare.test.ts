@@ -1,4 +1,3 @@
-/* eslint-disable @EslintSonar/no-duplicate-string */
 import { describe, expect, it } from "vitest";
 import compareSemver, { compareBuild, compareMinorMajorPatch, comparePrerelease } from "./compare";
 import { myErrorWrapper } from "oh-my-error";

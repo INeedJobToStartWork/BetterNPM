@@ -1,4 +1,3 @@
-/* eslint-disable @EslintSonar/no-duplicate-string */
 import { describe, expect, test } from "vitest";
 import { difference } from "./difference";
 

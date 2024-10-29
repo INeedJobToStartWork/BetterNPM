@@ -1,5 +1,3 @@
-/* eslint-disable complexity */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { IparseRange, satisfies, TCondition } from "@/functions";
 import { compareSemver, increase, parseRange, parseSemVer } from "@/functions";
 import { isX } from "@/utils";

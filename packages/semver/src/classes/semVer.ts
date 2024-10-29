@@ -1,5 +1,3 @@
-/* eslint-disable @EslintImports/no-deprecated */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { TOptionsSemVer } from "@/functions";
 import {
 	compareSemver,
@@ -38,14 +36,9 @@ export default class SemVer {
 				? inputVersion
 				: inputVersion.version();
 
-		// SPLITTING
-		// const { patch, buildmetadata, major, minor, prerelease, version } = isSemVer
-		// 	? inputVersion
-		// 	: parseSemVer(this.raw, { rangeMode: false });
-
 		const { patch, buildmetadata, major, minor, prerelease, version } = isSemVer
 			? inputVersion
-			: (parseSemVer(this.raw, mergedOptions) as ReturnType<typeof parseSemVer<{ rangeMode: false }>>); //TODO:fix
+			: parseSemVer(this.raw, mergedOptions); //TODO:fix
 		this.version = version;
 		this.major = major;
 		this.minor = minor;

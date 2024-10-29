@@ -37,24 +37,24 @@ const MYERRORLIST = {
 
 /**
  * Possible update types for version increment.
- * @intelType //TODO: no-internal-exports plugin need update to fix it
+ * @dontexport  //TODO: no-internal-exports plugin need update to fix it
  */
 type UpdateType = "buildmetadata" | "major" | "minor" | "patch" | "premajor" | "preminor" | "prepatch" | "prerelease";
 
 /**
  * Possible return types for the increase function.
- * @intelType
+ * @dontexport
  */
 type ReturnTypes = "object" | "SemVer" | "string";
 
-/** @intelType */
+/** @dontexport */
 type TTTTT = "premajor" | "preminor" | "prepatch" | "prerelease";
 
-/** @intelType */
+/** @dontexport */
 // eslint-disable-next-line @typescript-eslint/ban-types
 type TOptionsForPrerelease = TOptionsSemVer & { value?: "alpha" | "beta" | "rc" | (Object & string) };
 
-/** @intelType */
+/** @dontexport */
 // eslint-disable-next-line @typescript-eslint/ban-types
 type OptionsForBuild = TOptionsSemVer & { value?: "BUILD" | (Object & string) };
 

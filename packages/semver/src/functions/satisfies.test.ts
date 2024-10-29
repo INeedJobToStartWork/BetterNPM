@@ -1,4 +1,3 @@
-/* eslint-disable @EslintSonar/no-duplicate-string */
 import { describe, it, expect } from "vitest";
 import satisfies from "./satisfies";
 import { myErrorWrapper } from "oh-my-error";

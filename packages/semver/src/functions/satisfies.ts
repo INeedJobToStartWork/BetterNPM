@@ -1,4 +1,3 @@
-/* eslint-disable complexity */
 import type { TOptionsSemVer } from "@/functions";
 import { compareSemver, OptionsSemVerDefaults, parseSemVer } from "@/functions";
 

@@ -1,6 +1,6 @@
 {
 	"name": "@betternpm/semver",
-	"version": "1.0.0-prerelease",
+	"version": "1.0.0",
 	"description": "Rewritten semver by @betternpm",
 	"keywords": [
 		"semver",
@@ -44,7 +44,7 @@
 		"oh-my-error": "2.0.0-prerelease.0"
 	},
 	"devDependencies": {
-		"@esplugins/no-internal-exports": "1.0.0-prerelease.1",
+		"@esplugins/no-internal-exports": "^1.0.0",
 		"@ineedj/eslintrc": "~1.2.2",
 		"@ineedj/prettierrc": "^2.0.0",
 		"@ineedj/tsconfig": "^1.0.0",

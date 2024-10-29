@@ -1,5 +1,6 @@
 import config from "./tsup.base";
 import { copy } from "esbuild-plugin-copy";
+import noInternalExports from "@esplugins/no-internal-exports";
 import { defineConfig } from "tsup";
 
 export default defineConfig({
@@ -30,7 +31,7 @@ export default defineConfig({
 				{ from: "./.npmrc", to: "./.npmrc" },
 				{ from: "./.npmignore", to: "./.npmignore" },
 				{ from: "./README.md", to: "./README.md" },
-				{ from: "./LICENSE", to: "./LICENSE" }
+				{ from: "./LICENSE", to: "./" }
 			]
 		})
 	]

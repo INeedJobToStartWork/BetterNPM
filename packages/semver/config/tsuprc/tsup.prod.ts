@@ -1,7 +1,6 @@
 import config from "./tsup.base";
 import { copy } from "esbuild-plugin-copy";
 import noInternalExportsPlugin from "@esplugins/no-internal-exports";
-
 import { defineConfig } from "tsup";
 
 export default defineConfig({

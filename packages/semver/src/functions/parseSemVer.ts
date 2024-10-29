@@ -1,10 +1,4 @@
-// TODO: optimize regex?
-/* eslint-disable @EslintImports/no-deprecated */
 /* eslint-disable @EslintOptRegConf/optimize-regex */
-/* eslint-disable curly */
-/* eslint-disable complexity */
-/* eslint-disable no-nested-ternary */
-/* eslint-disable @EslintUnicorn/no-nested-ternary */
 /* eslint-disable @EslintSecurity/detect-unsafe-regex */
 import { SemVer } from "@/classes";
 import type { TMyErrorList } from "oh-my-error";
@@ -15,19 +9,13 @@ import { versionPostValidator, versionPreValidator } from "./versionValidator";
 //----------------------
 // Global CONST
 //----------------------
-/**
- * @internal
- */
+
 export const PATTERN_STRICT_SEMVER =
 	/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[A-Za-z-][\dA-Za-z-]*)(?:\.(?:0|[1-9]\d*|\d*[A-Za-z-][\dA-Za-z-]*))*))?(?:\+([\dA-Za-z-]+(?:\.[\dA-Za-z-]+)*))?$/u;
-/**
- * @internal
- */
+
 export const PATTERN_LOOSE_SEMVER =
 	/^v?(0|[1-9]\d*)(?:\.(0|[1-9]\d*))?(?:\.(0|[1-9]\d*))?(?:-((?:0|[1-9]\d*|\d*[a-z-][\da-z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-z-][\da-z-]*))*))?(?:\+([\da-z-]+(?:\.[\da-z-]+)*))?$/iu;
-/**
- * @internal
- */
+
 export const PATTERN_RANGE_MODE =
 	/^v?(0|[1-9]\d*|x|X|\*)(?:\.(0|[1-9]\d*|x|X|\*))?(?:\.(0|[1-9]\d*|x|X|\*))?(?:-((?:0|[1-9]\d*|\d*[a-z-][\da-z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-z-][\da-z-]*))*))?(?:\+([\da-z-]+(?:\.[\da-z-]+)*))?$/iu;
 
@@ -63,6 +51,7 @@ export const formatVersion = (version: Required<IparseRange> | Required<IparseSe
 	return `${base}${prerelease}${buildmetadata}`;
 };
 
+/** @dontexport */
 export interface IparseSemVer {
 	buildmetadata?: Array<number | string>;
 	major?: number;
@@ -73,6 +62,7 @@ export interface IparseSemVer {
 	version?: () => string;
 }
 
+/** @dontexport */
 export interface IparseRange extends Omit<IparseSemVer, "major" | "minor" | "patch"> {
 	major?: number | "*" | "X" | "x";
 	minor?: number | "*" | "X" | "x";
@@ -81,6 +71,7 @@ export interface IparseRange extends Omit<IparseSemVer, "major" | "minor" | "pat
 
 /**
  * Options for parsing a semantic version string or range.
+ * @dontexport
  */
 export type TOptionsSemVer = {
 	/** Accept and parse versions like `v1.2.3` etc*/
@@ -126,15 +117,17 @@ export function parseSemVer<T extends TOptionsSemVer>(
 	inputVersion: Required<IparseRange> | Required<IparseSemVer> | SemVer | string,
 	options: T = OptionsSemVerDefaults as T
 ): T | boolean extends { rangeMode: false } ? Required<IparseSemVer> : Required<IparseRange> {
-	if (typeof inputVersion != "string" && inputVersion instanceof SemVer)
+	if (typeof inputVersion != "string" && inputVersion instanceof SemVer) {
 		return resultsFormat(inputVersion) as Required<IparseSemVer>;
+	}
 
 	const mergedOptions: Required<TOptionsSemVer> = { ...OptionsSemVerDefaults, ...options };
 	const version = typeof inputVersion === "object" ? formatVersion(inputVersion) : inputVersion;
 
 	// PRE VALIDATION
-	if (mergedOptions.validators == true || mergedOptions.validators == "Pre")
+	if (mergedOptions.validators == true || mergedOptions.validators == "Pre") {
 		versionPreValidator(version, { returnType: mergedOptions.returnType });
+	}
 
 	// PARSING
 	const versionTrimmed = version.trim();
@@ -165,8 +158,9 @@ export function parseSemVer<T extends TOptionsSemVer>(
 			: []
 	}) as typeof mergedOptions extends { rangeMode: false } ? Required<IparseRange> : Required<IparseSemVer>;
 
-	if (mergedOptions.validators == true || mergedOptions.validators == "Pre")
+	if (mergedOptions.validators == true || mergedOptions.validators == "Pre") {
 		versionPostValidator(result, { returnType: mergedOptions.returnType });
+	}
 
 	return result;
 }

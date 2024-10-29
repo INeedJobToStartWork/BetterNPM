@@ -1,4 +1,3 @@
-/* eslint-disable complexity */
 import { satisfies } from "./satisfies";
 import { compareSemver } from "./compare";
 import { OptionsSemVerDefaults } from "./parseSemVer";
