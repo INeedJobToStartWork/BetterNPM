@@ -1,0 +1,67 @@
+{
+	"name": "@betternpm/pacote",
+	"version": "1.0.0",
+	"description": "Rewritten pacote by @betternpm. Synchronized with 21.0.0",
+	"private":true,
+	"keywords": [],
+	"homepage": "https://github.com/INeedJobToStartWork/BetterNPM",
+	"bugs": "https://github.com/INeedJobToStartWork/BetterNPM/issues/new/choose",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/INeedJobToStartWork/BetterNPM",
+		"directory": "packages/pacote"
+	},
+	"license": "MIT",
+	"author": "ineedjobtostartwork",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"------------------------UTILS------------------------": "",
+		"format": "pnpm prettier . --write && pnpm prettier . --check",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"npm:postpack": "clean-package restore",
+		"npm:prepack": "clean-package",
+		"------------------------BUILDS------------------------": "",
+		"build:prod": "pnpm tsup --config ./config/tsuprc/tsup.prod.ts ",
+		"build:npm": "pnpm npm:prepack && pnpm tsup --config ./config/tsuprc/tsup.prod.ts && pnpm npm:postpack",
+		"build:dev": "pnpm tsup --config ./config/tsuprc/tsup.dev.ts",
+		"------------------------DEPLOYS------------------------": "",
+		"prepublishOnly": "pnpm build:npm",
+		"------------------------TESTS------------------------": "",
+		"test": "vitest",
+		"bench": "vitest bench"
+	},
+	"lint-staged": {
+		"*": [
+			"pnpm format --",
+			"pnpm lint:fix --",
+			"pnpm lint --"
+		]
+	},
+	"dependencies": {
+		"oh-my-error": "2.0.1"
+	},
+	"devDependencies": {
+		"@esplugins/no-internal-exports": "^1.0.0",
+		"@ineedj/eslintrc": "~1.2.4",
+		"@ineedj/prettierrc": "^2.0.0",
+		"@ineedj/tsconfig": "^1.0.0",
+		"@types/eslint": "~9.6.1",
+		"@types/node": "^22.14.1",
+		"@types/safe-regex": "^1.1.6",
+		"clean-package": "^2.2.0",
+		"esbuild-plugin-copy": "^2.1.1",
+		"eslint": "~9.24.0",
+		"prettier": "^3.5.3",
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.3",
+		"vitest": "^3.1.1"
+	},
+	"publishConfig": {
+		"access": "public",
+		"directory": "dist",
+		"provenance": true,
+		"tag": "latest"
+	}
+}
